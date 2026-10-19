@@ -1,0 +1,22 @@
+{
+  "f6ef60c0-2fa7-46bb-af14-90b28d6261e1": {
+    "doc_id": "f6ef60c0-2fa7-46bb-af14-90b28d6261e1",
+    "filename": "1. Introduction of Software Engineering.pdf",
+    "file_type": "pdf",
+    "file_size_bytes": 3242116,
+    "total_pages": 53,
+    "total_chunks": 64,
+    "upload_time": "2026-10-13T19:35:52.801286Z",
+    "extra": {}
+  },
+  "e976c057-453e-4d64-a6a7-38956fc7a3dd": {
+    "doc_id": "e976c057-453e-4d64-a6a7-38956fc7a3dd",
+    "filename": "Harsh.pdf",
+    "file_type": "pdf",
+    "file_size_bytes": 141065,
+    "total_pages": 8,
+    "total_chunks": 26,
+    "upload_time": "2026-10-15T10:58:15.670836Z",
+    "extra": {}
+  }
+}

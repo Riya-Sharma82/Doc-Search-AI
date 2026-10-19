@@ -1,0 +1,34 @@
+Core Machine Learning Concepts
+
+Gradient Descent
+Gradient descent is an optimisation algorithm used to minimise the loss function of a machine learning model. It works by iteratively moving in the direction of the steepest descent of the loss surface, which is the negative gradient. The learning rate controls the size of each step.
+
+Stochastic Gradient Descent (SGD) computes the gradient using a single randomly selected training example at each step. Mini-batch gradient descent uses a small subset (batch) of the training data. Variants like Adam, RMSProp, and AdaGrad adapt the learning rate during training.
+
+Overfitting and Regularisation
+Overfitting occurs when a model learns the training data too well, including noise, and performs poorly on new data. Signs include high training accuracy but low validation accuracy. Regularisation techniques such as L1 (Lasso) and L2 (Ridge) add penalty terms to the loss function to discourage overly complex models.
+
+Dropout is a regularisation technique specific to neural networks where random neurons are deactivated during training to prevent co-adaptation. Data augmentation artificially increases the training set size by applying transformations to existing data.
+
+Feature Engineering
+Feature engineering is the process of using domain knowledge to create or transform input variables that improve model performance. Good features often matter more than the choice of algorithm. Techniques include normalisation, one-hot encoding, polynomial features, and interaction terms.
+
+Cross-Validation
+Cross-validation is a model evaluation technique that splits data into multiple folds. In k-fold cross-validation, the data is divided into k equal-sized subsets. The model is trained k times, each time using k-1 folds for training and one fold for validation. The average performance across folds provides a robust estimate of generalisation.
+
+Evaluation Metrics
+Selecting the right evaluation metric is critical and depends on the task. For classification: accuracy, precision, recall, F1-score, and area under the ROC curve (AUC-ROC). For regression: mean squared error (MSE), mean absolute error (MAE), and R-squared.
+
+Precision measures the proportion of positive predictions that are actually positive. Recall (sensitivity) measures the proportion of actual positives that are correctly identified. The F1-score is the harmonic mean of precision and recall.
+
+Vector Embeddings and Semantic Search
+Word embeddings represent words as dense numerical vectors in a continuous space where semantically similar words are close together. Word2Vec, GloVe, and FastText are classical embedding methods. Modern transformer-based models produce contextual embeddings where the vector for a word depends on its surrounding context.
+
+Sentence embeddings extend this concept to entire sentences or passages. Models like Sentence-BERT (SBERT) produce fixed-length vectors for sentences that can be compared using cosine similarity. These are the foundation of semantic search systems.
+
+Semantic search finds documents that are conceptually related to a query, even if they do not share exact keywords. It contrasts with keyword search which relies on term frequency and exact matching. BM25 (Best Match 25) is a widely used probabilistic keyword ranking function that improves on TF-IDF by normalising for document length.
+
+Hybrid search combines semantic and keyword search to leverage the strengths of both. Reciprocal Rank Fusion (RRF) is a simple but effective method for combining ranked lists from multiple retrieval systems without requiring score normalisation.
+
+Retrieval-Augmented Generation
+Retrieval-Augmented Generation (RAG) is a technique that enhances language model outputs by retrieving relevant documents at inference time. A retrieval system first finds the most relevant passages from a knowledge base, which are then provided as context to the language model when generating a response. RAG reduces hallucination by grounding the model in retrieved evidence.

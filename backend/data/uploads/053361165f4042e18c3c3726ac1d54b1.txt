@@ -1,0 +1,1 @@
+Artificial intelligence enables machines to simulate human reasoning. Machine learning is a core technique used in modern AI systems. Deep learning models use neural networks with many layers.

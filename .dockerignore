@@ -1,0 +1,19 @@
+# Root-level ignores (applies when building from project root)
+.git
+.gitignore
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/.pytest_cache
+**/htmlcov
+**/.coverage
+**/node_modules
+**/dist
+**/.env
+**/logs
+**/data/uploads/*
+**/data/vectorstore/*
+README.md
+docker-compose.yml
+evaluation/
+sample_docs/

@@ -1,0 +1,32 @@
+Artificial Intelligence: An Overview
+
+Artificial intelligence (AI) refers to the simulation of human intelligence processes by computer systems. These processes include learning, reasoning, and self-correction. AI has become one of the most transformative technologies of the 21st century.
+
+Machine Learning
+Machine learning (ML) is a subset of AI that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. ML focuses on developing computer programs that can access data and use it to learn for themselves. The primary types of machine learning are supervised learning, unsupervised learning, and reinforcement learning.
+
+In supervised learning, the algorithm is trained on labeled data. The model learns to map input features to output labels. Common algorithms include linear regression, logistic regression, decision trees, and support vector machines.
+
+Unsupervised learning involves training on unlabeled data. The algorithm discovers hidden patterns or data groupings on its own. Clustering algorithms like k-means and dimensionality reduction techniques like PCA are examples.
+
+Reinforcement learning trains an agent to make decisions by rewarding desired behaviors and punishing undesired ones. It has achieved remarkable results in game playing, robotics, and autonomous systems.
+
+Deep Learning
+Deep learning is a subfield of machine learning that uses neural networks with many layers, called deep neural networks. These architectures can automatically learn representations of data with multiple levels of abstraction.
+
+Convolutional Neural Networks (CNNs) are particularly effective for image recognition tasks. They use convolutional layers to detect spatial hierarchies of features. CNNs have been used in medical imaging, autonomous vehicles, and facial recognition.
+
+Recurrent Neural Networks (RNNs) and their variants like Long Short-Term Memory (LSTM) networks are designed for sequential data such as text and time series. They maintain internal state to process sequences of inputs.
+
+Transformer architectures, introduced in the paper "Attention Is All You Need" (2017), have revolutionised natural language processing. They use self-attention mechanisms to weigh the importance of different input elements. Models like BERT and GPT are based on transformer architectures.
+
+Natural Language Processing
+Natural language processing (NLP) is the branch of AI that helps computers understand, interpret, and generate human language. Key NLP tasks include tokenisation, named entity recognition, sentiment analysis, machine translation, and question answering.
+
+Large language models (LLMs) such as GPT-4 and Gemini are trained on vast amounts of text data and can perform a wide range of language tasks. They use the transformer architecture and have demonstrated strong few-shot and zero-shot learning capabilities.
+
+Applications of AI
+AI has found applications in healthcare for disease diagnosis and drug discovery, in finance for fraud detection and algorithmic trading, in transportation for autonomous vehicles, in education for personalised learning, and in customer service through chatbots and virtual assistants.
+
+Ethical Considerations
+The rapid advancement of AI raises important ethical questions around bias, fairness, transparency, privacy, and the future of work. Responsible AI development requires diverse teams, rigorous testing, and thoughtful governance frameworks.

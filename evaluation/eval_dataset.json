@@ -1,0 +1,73 @@
+[
+  {
+    "id": "q01",
+    "query": "What is machine learning?",
+    "expected_answer_contains": ["learn", "data", "experience", "programm"],
+    "relevant_docs": ["ai_overview.txt", "ml_concepts.txt"],
+    "relevant_passages_contain": ["machine learning", "automatically learn"]
+  },
+  {
+    "id": "q02",
+    "query": "How does deep learning differ from traditional machine learning?",
+    "expected_answer_contains": ["neural network", "layers", "representation"],
+    "relevant_docs": ["ai_overview.txt"],
+    "relevant_passages_contain": ["deep learning", "neural networks", "multiple levels"]
+  },
+  {
+    "id": "q03",
+    "query": "What is gradient descent and how does it work?",
+    "expected_answer_contains": ["loss", "gradient", "optimis", "learning rate"],
+    "relevant_docs": ["ml_concepts.txt"],
+    "relevant_passages_contain": ["gradient descent", "loss function", "learning rate"]
+  },
+  {
+    "id": "q04",
+    "query": "What is overfitting and how can it be prevented?",
+    "expected_answer_contains": ["training", "validation", "regularisation", "dropout"],
+    "relevant_docs": ["ml_concepts.txt"],
+    "relevant_passages_contain": ["overfitting", "regularisation", "dropout"]
+  },
+  {
+    "id": "q05",
+    "query": "What are transformer architectures and what are they used for?",
+    "expected_answer_contains": ["attention", "NLP", "language", "BERT"],
+    "relevant_docs": ["ai_overview.txt"],
+    "relevant_passages_contain": ["transformer", "attention", "natural language processing"]
+  },
+  {
+    "id": "q06",
+    "query": "What is semantic search and how does it differ from keyword search?",
+    "expected_answer_contains": ["embedding", "conceptual", "similarity", "keyword"],
+    "relevant_docs": ["ml_concepts.txt"],
+    "relevant_passages_contain": ["semantic search", "keyword search", "cosine similarity"]
+  },
+  {
+    "id": "q07",
+    "query": "What is BM25?",
+    "expected_answer_contains": ["ranking", "keyword", "term frequency", "document length"],
+    "relevant_docs": ["ml_concepts.txt"],
+    "relevant_passages_contain": ["BM25", "Best Match", "probabilistic"]
+  },
+  {
+    "id": "q08",
+    "query": "Explain Retrieval-Augmented Generation (RAG).",
+    "expected_answer_contains": ["retrieval", "language model", "hallucination", "context"],
+    "relevant_docs": ["ml_concepts.txt"],
+    "relevant_passages_contain": ["Retrieval-Augmented Generation", "RAG", "hallucination"]
+  },
+  {
+    "id": "q09",
+    "query": "What are the ethical concerns around artificial intelligence?",
+    "expected_answer_contains": ["bias", "fairness", "privacy", "transparency"],
+    "relevant_docs": ["ai_overview.txt"],
+    "relevant_passages_contain": ["ethical", "bias", "privacy"]
+  },
+  {
+    "id": "q10",
+    "query": "What is the capital of Australia?",
+    "expected_answer_contains": ["couldn't find", "insufficient information"],
+    "relevant_docs": [],
+    "relevant_passages_contain": [],
+    "expects_no_answer": true
+  }
+]

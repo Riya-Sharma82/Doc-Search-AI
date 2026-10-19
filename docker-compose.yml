@@ -1,0 +1,90 @@
+version: "3.9"
+
+# ── DocSearch AI — Docker Compose ─────────────────────────────────────────────
+# Usage:
+#   cp .env.example .env          # fill in GEMINI_API_KEY
+#   docker compose up --build     # first run (downloads models ~800 MB)
+#   docker compose up -d          # subsequent runs (detached)
+#   docker compose down -v        # stop and remove volumes
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # ── Backend (FastAPI) ────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: runtime
+    image: docsearch-backend:latest
+    container_name: docsearch-backend
+    restart: unless-stopped
+
+    # Load .env from project root
+    env_file:
+      - .env
+
+    # Override paths to point inside the container
+    environment:
+      UPLOAD_DIR: /data/uploads
+      VECTORSTORE_DIR: /data/vectorstore
+      HOST: "0.0.0.0"
+      PORT: "8000"
+      # Allow requests from the nginx frontend container
+      CORS_ORIGINS: "http://localhost,http://frontend"
+
+    volumes:
+      # Persist uploads and vector store across restarts
+      - backend_data:/data
+      # Persist downloaded embedding / reranker models
+      - huggingface_cache:/home/appuser/.cache/huggingface
+
+    ports:
+      # Expose directly for development / curl testing
+      - "8000:8000"
+
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 10s
+      start_period: 90s   # model loading can take a while on first start
+      retries: 5
+
+    networks:
+      - docsearch_net
+
+
+  # ── Frontend (Vite → nginx) ──────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: runtime
+    image: docsearch-frontend:latest
+    container_name: docsearch-frontend
+    restart: unless-stopped
+
+    ports:
+      - "80:80"
+
+    depends_on:
+      backend:
+        condition: service_healthy
+
+    networks:
+      - docsearch_net
+
+
+# ── Volumes ───────────────────────────────────────────────────────────────────
+volumes:
+  backend_data:
+    driver: local
+  huggingface_cache:
+    driver: local
+
+
+# ── Networks ──────────────────────────────────────────────────────────────────
+networks:
+  docsearch_net:
+    driver: bridge
